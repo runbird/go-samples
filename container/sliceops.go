@@ -28,7 +28,21 @@ func main() {
 	printSlice(s2)
 
 	fmt.Println("Deleting elements from slice")
+	s2 = append(s2[:3], s2[4:]...)
+	printSlice(s2)
 	//s2[:3] + s2[4:]
+
+	fmt.Println("Popping from front")
+	front := s2[0]
+	s2 = s2[1:]
+	fmt.Println(front)
+	printSlice(s2)
+
+	fmt.Println("Poping from back")
+	tail := s2[len(s2)-2]
+	s2 = s2[:len(s2)-1]
+	fmt.Println(tail)
+	printSlice(s2)
 }
 
 func printSlice(s []int) {
