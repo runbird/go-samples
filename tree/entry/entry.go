@@ -5,7 +5,6 @@ package main
 import "scy.com/runbird-go-samples/tree"
 import "fmt"
 
-
 //扩展他人实现，如 treeNode
 type myTreeNode struct {
 	node *tree.Node
@@ -39,4 +38,10 @@ func main() {
 	mynode := myTreeNode{&root}
 	mynode.postOrder()
 
+	//2020-05-17
+	nodeCount := 0
+	root.TraverseFunc(func(node *tree.Node) {
+		nodeCount++
+	})
+	fmt.Printf("Node count:%d\n", nodeCount)
 }
