@@ -1,4 +1,4 @@
-package main
+package fibonacci
 
 import (
 	"bufio"
@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	f := fibonacci()
+	f := Fibonacci()
 	scan(f)
 }
 
@@ -21,7 +21,7 @@ func main() {
 //	}
 //}
 
-func fibonacci() intGen {
+func Fibonacci() intGen {
 	a, b := 0, 1
 	return func() int {
 		a, b = b, a+b
