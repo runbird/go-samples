@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Golang</title>
+</head>
+<body>
+<h1> {{ .Title }}</h1>
+<ul>
+    {{ range .Items}}
+        {{  if .Done    }}
+            <li style="color: greenyellow">{{ .Done}}</li>
+        {{ else }}
+        <li style="color: darkred"> {{ .Job}}</li>
+        {{ end }}
+    {{ end }}
+</ul>
+</body>
+</html>

@@ -46,3 +46,30 @@ func convertToBin(i int) string {
 	}
 	return result
 }
+
+//标签使用
+//goto 快速跳出循环
+func gotoFunc() {
+	var a = 10
+LOOP:
+	for a < 20 {
+		if a == 15 {
+			a += 1
+			goto LOOP
+		}
+		fmt.Printf("当前循环的值为: %d\n", a)
+		a++
+	}
+
+	for i := 0; i < 10; i++ {
+		for j := 0; j < 10; j++ {
+			if j == 2 {
+				goto breakHere
+			}
+		}
+	}
+	return
+
+breakHere:
+	fmt.Print("调到当前标签")
+}
